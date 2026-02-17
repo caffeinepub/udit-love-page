@@ -1,0 +1,88 @@
+{
+  "kind": "build_request",
+  "title": "Add latest 4 uploaded photos to Memory Gallery",
+  "projectName": "Udit Love Page",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-16",
+      "text": "Update the Memory Gallery section (the selected Memories gallery element) to display only the latest 4 uploaded photos: IMG-20260217-WA0007-2.jpg, IMG-20260217-WA0006-2.jpg, IMG-20260217-WA0008-3.jpg, IMG-20260217-WA0009-2.jpg.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Only the last 4 photos add fast",
+          "Add the latest 4 photos",
+          "Build"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The Memory Gallery grid renders exactly 4 items and uses the four specified filenames.",
+        "No placeholder memory cards remain in the Memory Gallery grid.",
+        "Each card shows the corresponding photo (not an emoji placeholder)."
+      ]
+    },
+    {
+      "id": "REQ-17",
+      "text": "Ensure the Memory Gallery layout auto-adjusts cleanly for 4 photos across responsive breakpoints (mobile/tablet/desktop) without leaving empty columns or awkward spacing.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Only the last 4 photos add fast"
+        ]
+      },
+      "acceptanceCriteria": [
+        "On mobile, the gallery shows a single-column layout with 4 cards.",
+        "On small screens, the gallery shows 2 columns when space allows.",
+        "On large screens, the gallery does not render empty gaps that look like missing cards (grid should feel balanced for 4 items)."
+      ]
+    },
+    {
+      "id": "REQ-18",
+      "text": "When a Memory Gallery card is clicked, the modal/dialog expanded view must show the same corresponding photo at larger size and allow closing to return to the grid (keeping existing smooth behavior).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "add the latest 4 photos to the selected Memories section"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Clicking any of the 4 cards opens a dialog showing that same photo in the expanded view.",
+        "The expanded view provides a clear close interaction and returns to the same scroll position in the gallery.",
+        "No dialog content instructs to 'Replace with your actual photos' for these 4 items."
+      ]
+    }
+  ],
+  "constraints": [
+    "Frontend immutable paths must not be edited: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui/*.",
+    "Keep all changes scoped to the Memory Gallery section implementation (frontend/src/components/sections/MemoryGallerySection.tsx) and static assets as needed.",
+    "Do not add any backend logic; backend/main.mo should remain unchanged."
+  ],
+  "nonGoals": [
+    "Do not deploy/publish the site to the public internet (generate build changes only).",
+    "Do not add the other uploaded images beyond the latest 4 requested.",
+    "Do not introduce new sections or change existing section text outside the Memory Gallery."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
+  }
+}

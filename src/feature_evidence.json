@@ -1,0 +1,59 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-update-the-memory-gallery-section-the-selected-memories-gallery-element-to-display-only-the-latest-4-uploaded-photos-img-20260217-wa0007-2-jpg-img-20260217-wa0006-2-jpg-img-20260217-wa0008-3-jpg-img-20260217-wa0009-2-jpg",
+      "featureTitle": "Update the Memory Gallery section (the selected Memories gallery element) to display only the latest 4 uploaded photos: IMG-20260217-WA0007-2.jpg, IMG-20260217-WA0006-2.jpg, IMG-20260217-WA0008-3.jpg, IMG-20260217-WA0009-2.jpg.",
+      "files": [
+        "frontend/src/components/sections/MemoryGallerySection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-16"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-ensure-the-memory-gallery-layout-auto-adjusts-cleanly-for-4-photos-across-responsive-breakpoints-mobile-tablet-desktop-without-leaving-empty-columns-or-awkward-spacing",
+      "featureTitle": "Ensure the Memory Gallery layout auto-adjusts cleanly for 4 photos across responsive breakpoints (mobile/tablet/desktop) without leaving empty columns or awkward spacing.",
+      "files": [
+        "frontend/src/components/sections/MemoryGallerySection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-17"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-when-a-memory-gallery-card-is-clicked-the-modal-dialog-expanded-view-must-show-the-same-corresponding-photo-at-larger-size-and-allow-closing-to-return-to-the-grid-keeping-existing-smooth-behavior",
+      "featureTitle": "When a Memory Gallery card is clicked, the modal/dialog expanded view must show the same corresponding photo at larger size and allow closing to return to the grid (keeping existing smooth behavior).",
+      "files": [
+        "frontend/src/components/sections/MemoryGallerySection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-18"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

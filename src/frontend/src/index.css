@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 1.5rem;
+        
+        /* Soft pastel palette with OKLCH */
+        --background: 0.98 0.01 340;
+        --foreground: 0.25 0.02 340;
+        
+        --card: 0.99 0.015 340;
+        --card-foreground: 0.25 0.02 340;
+        
+        --popover: 0.99 0.015 340;
+        --popover-foreground: 0.25 0.02 340;
+        
+        /* Blush pink primary */
+        --primary: 0.85 0.08 350;
+        --primary-foreground: 0.25 0.02 340;
+        
+        /* Baby pink secondary */
+        --secondary: 0.92 0.06 345;
+        --secondary-foreground: 0.25 0.02 340;
+        
+        /* Rose pink accent */
+        --accent: 0.75 0.15 345;
+        --accent-foreground: 0.98 0.01 340;
+        
+        /* Subtle gold */
+        --gold: 0.82 0.08 75;
+        --gold-foreground: 0.25 0.02 340;
+        
+        --muted: 0.95 0.02 340;
+        --muted-foreground: 0.55 0.02 340;
+        
+        --destructive: 0.577 0.245 27.325;
+        --destructive-foreground: 0.985 0 0;
+        
+        --border: 0.90 0.03 340;
+        --input: 0.90 0.03 340;
+        --ring: 0.75 0.15 345;
+    }
+
+    .dark {
+        --background: 0.15 0.02 340;
+        --foreground: 0.98 0.01 340;
+        
+        --card: 0.18 0.02 340;
+        --card-foreground: 0.98 0.01 340;
+        
+        --popover: 0.18 0.02 340;
+        --popover-foreground: 0.98 0.01 340;
+        
+        --primary: 0.75 0.15 345;
+        --primary-foreground: 0.98 0.01 340;
+        
+        --secondary: 0.25 0.04 345;
+        --secondary-foreground: 0.98 0.01 340;
+        
+        --accent: 0.65 0.12 345;
+        --accent-foreground: 0.98 0.01 340;
+        
+        --gold: 0.72 0.08 75;
+        --gold-foreground: 0.98 0.01 340;
+        
+        --muted: 0.25 0.02 340;
+        --muted-foreground: 0.65 0.02 340;
+        
+        --destructive: 0.704 0.191 22.216;
+        --destructive-foreground: 0.98 0.01 340;
+        
+        --border: 0.30 0.03 340;
+        --input: 0.30 0.03 340;
+        --ring: 0.65 0.12 345;
+    }
+
+    * {
+        @apply border-border;
+    }
+    
+    body {
+        @apply bg-background text-foreground;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Dancing Script', cursive;
+        font-weight: 600;
+    }
+}
+
+@layer utilities {
+    .glow-soft {
+        box-shadow: 0 0 20px oklch(var(--primary) / 0.3),
+                    0 0 40px oklch(var(--primary) / 0.15);
+    }
+    
+    .glow-gold {
+        box-shadow: 0 0 15px oklch(var(--gold) / 0.4),
+                    0 0 30px oklch(var(--gold) / 0.2);
+    }
+    
+    .text-gradient {
+        background: linear-gradient(135deg, 
+            oklch(var(--accent)), 
+            oklch(var(--primary)));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    
+    .bg-gradient-pastel {
+        background: linear-gradient(135deg,
+            oklch(var(--background)),
+            oklch(var(--secondary) / 0.3),
+            oklch(var(--primary) / 0.2));
+    }
+    
+    .bg-gradient-footer {
+        background: linear-gradient(to top,
+            oklch(var(--accent) / 0.15),
+            oklch(var(--primary) / 0.1),
+            transparent);
+    }
+    
+    .animate-fade-in {
+        animation: fadeIn 0.8s ease-out forwards;
+    }
+    
+    .animate-slide-up {
+        animation: slideUp 0.8s ease-out forwards;
+    }
+    
+    .animate-float {
+        animation: float 3s ease-in-out infinite;
+    }
+    
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    
+    @keyframes slideUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    @keyframes float {
+        0%, 100% {
+            transform: translateY(0px);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+    
+    .scroll-smooth {
+        scroll-behavior: smooth;
+    }
+}
+

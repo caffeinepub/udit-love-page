@@ -1,0 +1,199 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 7,
+  "summary": "Build a fully interactive, soft pastel personal website dedicated to Udit with a warm, elegant, Pinterest-inspired design, smooth scrolling/transitions, optional background music toggle, responsive layout, and multiple romantic themed sections (story, reasons, gallery, love note, surprise/password, countdown).",
+  "architectural_notes": [
+    "Site should include optional background-music toggle; selected track requested is “Tum Ho Toh” by Vishal Mishra (may require fallback if copyrighted audio cannot be embedded).",
+    "Countdown timer target date: 18 February 2026.",
+    "Surprise section password is “motu” to reveal hidden message.",
+    "Music toggle expects an audio file at /assets/audio/placeholder-love-track.mp3; include a royalty-free placeholder track there by default so playback works out of the box (user can replace later).",
+    "Memories/Memory Gallery should support swapping placeholder polaroids for user-uploaded images and auto-adjust the grid layout (no empty columns) based on actual image count."
+  ],
+  "known_issues": [
+    "Background music toggle is currently silent because /assets/audio/placeholder-love-track.mp3 is missing from the project.",
+    "User reports the uploaded photos were not added to the Memories section as requested (gallery still shows placeholders/old content)."
+  ],
+  "isFixRequest": true,
+  "existing_features": [
+    {
+      "id": "feature-create-a-single-page-fully-responsive-personal-website-dedicated-to-udit-with-a-warm-elegant-pinterest-inspired-visual-theme-using-blush-pink-f8c8dc-baby-pink-ffd1dc-rose-pink-ff66a3-soft-white-and-subtle-gold-accents-use-a-script-font-for-headings-and-a-modern-sans-serif-for-body-text-apply-consistent-rounded-glowing-buttons-soft-shadows-and-subtle-animations-throughout",
+      "title": "Create a single-page, fully responsive personal website dedicated to Udit with a warm, elegant, Pinterest-inspired visual theme using blush pink (#F8C8DC), baby pink (#FFD1DC), rose pink (#FF66A3), soft white, and subtle gold accents; use a script font for headings and a modern sans-serif for body text; apply consistent rounded/glowing buttons, soft shadows, and subtle animations throughout.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-smooth-scrolling-between-sections-and-fade-slide-transitions-on-section-entry-e-g-on-scroll-into-view-while-keeping-performance-acceptable-on-mobile-devices",
+      "title": "Implement smooth scrolling between sections and fade/slide transitions on section entry (e.g., on scroll into view) while keeping performance acceptable on mobile devices.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-hero-section-with-heading-text-for-the-love-of-my-life-udit-subheading-you-entered-my-life-through-a-screen-and-became-someone-truly-special-and-a-prominent-scroll-button-that-moves-to-the-next-section",
+      "title": "Build the Hero section with heading text “For the Love of My Life: Udit”, subheading “You entered my life through a screen and became someone truly special.” and a prominent scroll button that moves to the next section.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-our-story-section-themed-around-an-online-connection-starting-in-a-random-instagram-group-chat-titled-a-random-instagram-group-chat-include-a-vertical-or-horizontal-timeline-with-the-lines-one-message-and-everything-changed-late-night-conversations-that-felt-effortless-moments-that-made-distance-feel-smaller-video-calls-that-felt-meaningful-include-the-line-tum-paas-nahi-phir-bhi-sabse-kareeb-ho-and-the-quote-distance-means-little-when-someone-matters",
+      "title": "Build the “Our Story” section themed around an online connection starting in a random Instagram group chat, titled “A Random Instagram Group Chat.” Include a vertical (or horizontal) timeline with the lines: “One message and everything changed.” “Late-night conversations that felt effortless.” “Moments that made distance feel smaller.” “Video calls that felt meaningful.” Include the line “Tum paas nahi, phir bhi sabse kareeb ho.” and the quote “Distance means little when someone matters.”",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-reasons-section-as-soft-pastel-cards-showing-these-lines-you-choose-to-listen-you-make-distance-feel-manageable-you-bring-comfort-you-call-me-motu",
+      "title": "Build the “Reasons” section as soft pastel cards showing these lines: “You choose to listen.” “You make distance feel manageable.” “You bring comfort.” “You call me motu.”",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-memory-gallery-section-with-polaroid-style-image-placeholders-representing-video-calls-each-with-a-simple-caption-clicking-a-polaroid-opens-an-expanded-view-with-a-smooth-transition-and-allows-closing-to-return-to-the-grid",
+      "title": "Build a “Memory gallery” section with Polaroid-style image placeholders representing video calls, each with a simple caption; clicking a polaroid opens an expanded view with a smooth transition and allows closing to return to the grid.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-love-note-section-featuring-a-clickable-envelope-ui-that-reveals-the-message-udit-i-didn-t-expect-an-online-conversation-to-become-something-so-meaningful-you-ve-become-a-source-of-calm-and-consistency",
+      "title": "Build a “Love note” section featuring a clickable envelope UI that reveals the message: “Udit, I didn’t expect an online conversation to become something so meaningful. You’ve become a source of calm and consistency.”",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-surprise-section-with-a-password-input-when-the-user-enters-the-correct-password-motu-reveal-the-message-udit-you-matter-a-lot-to-me-you-are-my-saiyaara-handle-incorrect-passwords-with-a-gentle-non-harsh-error-state",
+      "title": "Build a “Surprise” section with a password input. When the user enters the correct password “motu”, reveal the message: “Udit, you matter a lot to me. You are my saiyaara.” Handle incorrect passwords with a gentle, non-harsh error state.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-countdown-section-that-displays-a-live-countdown-timer-targeting-18-february-2026-show-days-hours-minutes-seconds-and-gracefully-handles-the-moment-the-countdown-reaches-zero-e-g-show-a-celebratory-complete-state",
+      "title": "Build a “Countdown” section that displays a live countdown timer targeting 18 February 2026 (show days/hours/minutes/seconds) and gracefully handles the moment the countdown reaches zero (e.g., show a celebratory/complete state).",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-site-footer-with-a-soft-gradient-background-and-the-line-forever-feels-less-scary-with-the-right-person",
+      "title": "Add a site footer with a soft gradient background and the line: “Forever feels less scary with the right person.”",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-an-optional-background-music-toggle-control-play-pause-with-clear-ui-states-due-to-copyright-restrictions-do-not-embed-or-ship-copyrighted-commercial-music-instead-include-a-replaceable-local-placeholder-audio-asset-and-clear-labeling-so-the-user-can-swap-in-their-own-audio-file-for-tum-ho-toh-by-vishal-mishra",
+      "title": "Add an optional background music toggle control (play/pause) with clear UI states. Due to copyright restrictions, do not embed or ship copyrighted commercial music; instead, include a replaceable local placeholder audio asset and clear labeling so the user can swap in their own audio file for “Tum Ho Toh” by Vishal Mishra.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-simple-top-navigation-or-section-quick-jump-controls-that-lets-users-jump-to-hero-our-story-reasons-memory-gallery-love-note-surprise-countdown-footer-ensure-it-matches-the-site-s-aesthetic-and-works-on-mobile-e-g-collapsible",
+      "title": "Add a simple top navigation (or section quick-jump controls) that lets users jump to: Hero, Our Story, Reasons, Memory Gallery, Love Note, Surprise, Countdown, Footer; ensure it matches the site’s aesthetic and works on mobile (e.g., collapsible).",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-render-any-generated-images-as-static-assets-under-frontend-public-assets-generated-and-reference-them-directly-from-the-frontend-no-backend-image-routing",
+      "title": "Render any generated images as static assets under frontend/public/assets/generated and reference them directly from the frontend (no backend image routing).",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-royalty-free-placeholder-audio-file-at-frontend-public-assets-audio-placeholder-love-track-mp3-so-the-existing-musictoggle-component-can-successfully-load-and-play-background-music",
+      "title": "Add a royalty-free placeholder audio file at frontend/public/assets/audio/placeholder-love-track.mp3 so the existing MusicToggle component can successfully load and play background music.",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-the-shipped-placeholder-audio-is-safe-to-redistribute-royalty-free-licensed-for-inclusion-and-does-not-include-copyrighted-commercial-music-keep-the-on-screen-guidance-that-users-can-replace-assets-audio-placeholder-love-track-mp3-with-their-own-song",
+      "title": "Ensure the shipped placeholder audio is safe to redistribute (royalty-free / licensed for inclusion) and does not include copyrighted commercial music; keep the on-screen guidance that users can replace /assets/audio/placeholder-love-track.mp3 with their own song.",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-memory-gallery-section-the-selected-memories-gallery-element-to-display-only-the-latest-4-uploaded-photos-img-20260217-wa0007-2-jpg-img-20260217-wa0006-2-jpg-img-20260217-wa0008-3-jpg-img-20260217-wa0009-2-jpg",
+      "title": "Update the Memory Gallery section (the selected Memories gallery element) to display only the latest 4 uploaded photos: IMG-20260217-WA0007-2.jpg, IMG-20260217-WA0006-2.jpg, IMG-20260217-WA0008-3.jpg, IMG-20260217-WA0009-2.jpg.",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-the-memory-gallery-layout-auto-adjusts-cleanly-for-4-photos-across-responsive-breakpoints-mobile-tablet-desktop-without-leaving-empty-columns-or-awkward-spacing",
+      "title": "Ensure the Memory Gallery layout auto-adjusts cleanly for 4 photos across responsive breakpoints (mobile/tablet/desktop) without leaving empty columns or awkward spacing.",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-when-a-memory-gallery-card-is-clicked-the-modal-dialog-expanded-view-must-show-the-same-corresponding-photo-at-larger-size-and-allow-closing-to-return-to-the-grid-keeping-existing-smooth-behavior",
+      "title": "When a Memory Gallery card is clicked, the modal/dialog expanded view must show the same corresponding photo at larger size and allow closing to return to the grid (keeping existing smooth behavior).",
+      "reqIds": [
+        "REQ-18"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create romantic soft-pastel personal website dedicated to Udit with defined color palette, fonts (script + modern sans-serif), smooth scrolling, fade transitions, rounded glowing buttons, subtle animations, and responsive layout",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Implement page sections and content: Hero with scroll button; Our Story timeline with specified lines + Hindi quote; Reasons cards; Memory gallery with polaroid-style placeholders and click-to-expand; Love note envelope reveal; Surprise password input (motu) reveal message; Countdown timer set to 18 Feb 2026; Footer line",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Add optional background music toggle and set selected song to “Tum Ho Toh” by Vishal Mishra (handle copyright/embedding constraints as needed)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Add a working royalty-free placeholder audio file at /assets/audio/placeholder-love-track.mp3 and wire it to the existing background-music toggle so audio plays",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Update the Memories/Memory Gallery section to use the user’s latest 4 uploaded photos (no placeholders) and auto-adjust the grid to remove empty columns when fewer photos are present",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Udit Love Page",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

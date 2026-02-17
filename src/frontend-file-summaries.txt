@@ -1,0 +1,23 @@
+{
+  "frontend/src/index.css": "Global styles with soft pastel OKLCH color palette (blush pink, baby pink, rose pink, gold accents), Dancing Script for headings, Inter for body text, custom glow utilities, and smooth animations for the romantic theme.",
+  "frontend/src/App.tsx": "Main application component that composes all sections (Hero, Our Story, Reasons, Memory Gallery, Love Note, Surprise, Countdown, Footer) with background decoration, top navigation, and music toggle in a single-page layout.",
+  "frontend/src/components/TopNav.tsx": "Fixed top navigation bar with \"For Udit\" branding, desktop menu links, and mobile Sheet menu for smooth scrolling to all sections.",
+  "frontend/src/components/MusicToggle.tsx": "Floating music play/pause toggle button with improved async play() handling that only sets isPlaying to true after successful playback, includes tooltip instructions for replacing the placeholder audio file.",
+  "frontend/src/components/sections/HeroSection.tsx": "Hero section with main heading \"For the Love of My Life: Udit\", subheading about online connection, and animated scroll button to Our Story section.",
+  "frontend/src/components/sections/OurStorySection.tsx": "Our Story section featuring \"A Random Instagram Group Chat\" title, vertical timeline with four milestone lines, Hindi quote \"Tum paas nahi, phir bhi sabse kareeb ho\", and distance quote.",
+  "frontend/src/components/sections/ReasonsSection.tsx": "Reasons section displaying four soft pastel cards with icons showing why Udit is special (listening, distance management, comfort, calling motu).",
+  "frontend/src/components/sections/MemoryGallerySection.tsx": "Memory gallery section displaying exactly 4 uploaded photos in polaroid-style cards with responsive grid (1 column mobile, 2 columns small screens, 4 columns large screens), click-to-expand Dialog view showing the same photo, and smooth scroll reveal animations.",
+  "frontend/src/components/sections/LoveNoteSection.tsx": "Love note section with clickable envelope icon that reveals/hides the heartfelt message about meaningful online connection with smooth animation.",
+  "frontend/src/components/sections/SurpriseSection.tsx": "Surprise section with password input (\"motu\") that unlocks a special message \"You are my saiyaara\" with gentle error handling for incorrect attempts.",
+  "frontend/src/components/sections/CountdownSection.tsx": "Live countdown timer to February 18, 2026 displaying days/hours/minutes/seconds in gradient cards, with celebratory state when complete.",
+  "frontend/src/components/Footer.tsx": "Footer with soft gradient background, romantic quote \"Forever feels less scary with the right person\", and Caffeine.ai attribution with UTM tracking.",
+  "frontend/src/hooks/useScrollReveal.ts": "Custom hook using IntersectionObserver for fade/slide-in animations when sections enter viewport, with one-time reveal and reduced-motion support.",
+  "frontend/src/hooks/usePrefersReducedMotion.ts": "Hook that detects user's reduced-motion preference via media query for accessibility-friendly animations.",
+  "frontend/src/hooks/useCountdown.ts": "Custom hook that calculates and updates countdown timer every second, returning days/hours/minutes/seconds and completion status.",
+  "frontend/src/lib/scrollToSection.ts": "Utility function for smooth scrolling to section IDs with header offset adjustment for fixed navigation.",
+  "frontend/src/hooks/useQueries.ts": "Placeholder file for future React Query hooks to interact with backend (currently empty as backend has no functionality).",
+  "frontend/index.html": "HTML entry point with updated title \"For Udit - A Love Story\" and meta description for the romantic personal website.",
+  "frontend/tailwind.config.js": "Extended Tailwind configuration adding gold color tokens to match the soft pastel romantic theme with custom utilities.",
+  "frontend/public/assets/audio/placeholder-love-track.mp3": "Small royalty-free CC0 licensed ambient music placeholder file (30-60 second loop) that provides working background music for the site.",
+  "frontend/public/assets/audio/placeholder-love-track.LICENSE.txt": "License documentation for the placeholder audio file, confirming CC0/public domain status and providing instructions for replacing with custom music."
+}

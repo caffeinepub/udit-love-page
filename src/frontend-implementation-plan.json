@@ -1,0 +1,75 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Memory Gallery: show latest 4 uploaded photos with responsive grid and matching modal",
+  "requirements": [
+    {
+      "id": "REQ-16",
+      "summary": "Replace placeholder Memory Gallery items with exactly the latest 4 specified photo assets.",
+      "acceptanceCriteria": [
+        "The Memory Gallery grid renders exactly 4 items and uses the four specified filenames.",
+        "No placeholder memory cards remain in the Memory Gallery grid.",
+        "Each card shows the corresponding photo (not an emoji placeholder)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/IMG-20260217-WA0007-2.jpg",
+          "operation": "create",
+          "description": "Add this photo as a static public asset so Memory Gallery cards can render it."
+        },
+        {
+          "path": "frontend/public/assets/IMG-20260217-WA0006-2.jpg",
+          "operation": "create",
+          "description": "Add this photo as a static public asset so Memory Gallery cards can render it."
+        },
+        {
+          "path": "frontend/public/assets/IMG-20260217-WA0008-3.jpg",
+          "operation": "create",
+          "description": "Add this photo as a static public asset so Memory Gallery cards can render it."
+        },
+        {
+          "path": "frontend/public/assets/IMG-20260217-WA0009-2.jpg",
+          "operation": "create",
+          "description": "Add this photo as a static public asset so Memory Gallery cards can render it."
+        },
+        {
+          "path": "frontend/src/components/sections/MemoryGallerySection.tsx",
+          "operation": "modify",
+          "description": "Update the Memory Gallery data model to exactly 4 items referencing the four new public photo assets, and replace the emoji placeholder with an image element rendering the corresponding photo. Keep changes scoped to this section. Use the shadcn-ui Dialog components already imported to preserve the existing interaction patterns (verify the component's usage instructions before implementing)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-17",
+      "summary": "Adjust Memory Gallery grid styling so 4 photos layout cleanly across breakpoints with balanced spacing.",
+      "acceptanceCriteria": [
+        "On mobile, the gallery shows a single-column layout with 4 cards.",
+        "On small screens, the gallery shows 2 columns when space allows.",
+        "On large screens, the gallery does not render empty gaps that look like missing cards (grid should feel balanced for 4 items)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/sections/MemoryGallerySection.tsx",
+          "operation": "modify",
+          "description": "Update the grid column classes so the 4-item gallery renders as 1 column on mobile, 2 columns on small screens, and a balanced large-screen layout for exactly 4 items (e.g., 4 columns on large screens). Ensure card sizing/cropping stays consistent and no awkward empty space appears."
+        }
+      ]
+    },
+    {
+      "id": "REQ-18",
+      "summary": "Ensure clicking a Memory Gallery card opens a dialog showing the same corresponding photo, with clear close behavior and no placeholder instructions.",
+      "acceptanceCriteria": [
+        "Clicking any of the 4 cards opens a dialog showing that same photo in the expanded view.",
+        "The expanded view provides a clear close interaction and returns to the same scroll position in the gallery.",
+        "No dialog content instructs to 'Replace with your actual photos' for these 4 items."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/sections/MemoryGallerySection.tsx",
+          "operation": "modify",
+          "description": "Bind each DialogContent expanded view to the same image source as its corresponding grid card, remove any placeholder instructional text, and ensure the dialog can be closed reliably (using the existing shadcn-ui Dialog close behaviors; verify the component's usage instructions before implementing). Avoid extra state that could desync the selected photo from the clicked card."
+        }
+      ]
+    }
+  ]
+}
